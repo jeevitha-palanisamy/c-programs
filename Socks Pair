@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,n,k,t=0,count,arr[100];
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    
+    for(j=0;j<n;j++){
+        count=1;
+        for(k=j+1;k<n;k++){
+            if(arr[j]==arr[k] && arr[j]!=0){
+                arr[k]=0;
+                count++;
+            }
+        }
+        t=count/2+t;
+    }
+    printf("%d",t);
+    
+    
+}
